@@ -1,0 +1,17 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        MIWeb.Neos.Privacy: true
+    userInterface:
+      translation:
+        autoInclude:
+          MIWeb.Neos.Privacy:
+            - 'NodeTypes/*'
+MIWeb:
+  Neos:
+    Privacy:
+      enabled: false
+      translations:
+        source: 'Privacy'
+        package: 'MIWeb.Neos.Privacy'

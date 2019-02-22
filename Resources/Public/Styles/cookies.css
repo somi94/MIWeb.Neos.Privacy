@@ -1,0 +1,43 @@
+.miweb-neos-privacy-cookies {
+    background-color: #444;
+    color: #fff;
+
+    line-height: 40px;
+
+    padding: 1em 2em;
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.miweb-neos-privacy-cookies p {
+    margin: 0;
+}
+
+.miweb-neos-privacy-cookies p a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.miweb-neos-privacy-cookies p a:hover {
+    color: #aaa;
+}
+
+.miweb-neos-privacy-cookies a.btn,
+.miweb-neos-privacy-cookies a.btn:hover {
+    font-size: 1em;
+}
+
+.miweb-neos-privacy-cookies a.btn {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #444;
+    float: right;
+}
+
+.miweb-neos-privacy-cookies a.btn:hover {
+    background-color: #444;
+    color: #fff;
+}

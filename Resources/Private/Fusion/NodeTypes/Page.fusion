@@ -1,0 +1,74 @@
+prototype(Neos.Neos:Page) {
+    @context.translationSource = ${Configuration.setting('MIWeb.Neos.Privacy.translations.source')}
+    @context.translationPackage = ${Configuration.setting('MIWeb.Neos.Privacy.translations.package')}
+
+    head {
+//        stylesheets.miwebPrivacyCookies = Neos.Fusion:Template {
+//            templatePath = 'resource://MIWeb.Neos.Privacy/Private/Templates/NodeTypes/Page.html'
+//            sectionName = 'stylesheets'
+//
+//            @if.enabled = ${Configuration.setting('MIWeb.Neos.Privacy.enabled') == true}
+//        }
+
+        stylesheets.miwebPrivacyCookies = Neos.Fusion:Tag {
+            tagName = 'link'
+            attributes {
+                rel = 'stylesheet'
+                type = 'text/css'
+                href = Neos.Fusion:ResourceUri {
+                    path = 'Styles/cookies.css'
+                    package = 'MIWeb.Neos.Privacy'
+                }
+            }
+
+            @if.enabled = ${Configuration.setting('MIWeb.Neos.Privacy.enabled') == true}
+            @position = 1
+        }
+    }
+
+    body {
+        @context.translations = Neos.Fusion:RawArray {
+            message = ${Translation.translate('cookies.text', null, [], translationSource, translationPackage)}
+            button = ${Translation.translate('cookies.button', null, [], translationSource, translationPackage)}
+
+            @process.json = ${Json.stringify(value)}
+        }
+
+        javascripts.miwebPrivacyCookiesTranslations = Neos.Fusion:Tag {
+            tagName = 'script'
+            attributes {
+                type = 'text/javascript'
+            }
+            content = ${"miwebPrivacyCookiesTranslations = " + translations + ";"}
+        }
+
+        javascripts.miwebPrivacyCookies = Neos.Fusion:Tag {
+            tagName = 'script'
+            attributes {
+                type = 'text/javascript'
+                src = Neos.Fusion:ResourceUri {
+                    path = 'Scripts/cookies.js'
+                    package = 'MIWeb.Neos.Privacy'
+                }
+            }
+
+            @if.enabled = ${Configuration.setting('MIWeb.Neos.Privacy.enabled') == true}
+        }
+
+//        javascripts.miwebPrivacyCookies = Neos.Fusion:Template {
+//            templatePath = 'resource://MIWeb.Neos.Privacy/Private/Templates/NodeTypes/Page.html'
+//            sectionName = 'javascripts'
+//
+//            @if.enabled = ${Configuration.setting('MIWeb.Neos.Privacy.enabled') == true}
+//        }
+
+//        miwebPrivacyCookies = Neos.Fusion:Template {
+//            templatePath = 'resource://MIWeb.Neos.Privacy/Private/Templates/NodeTypes/Page.html'
+//            sectionName = 'contents'
+//
+//            @if.enabled = ${Configuration.setting('MIWeb.Neos.Privacy.enabled') == true}
+//        }
+    }
+
+//    @if.inFrontend = ${site.context.inBackend == false}
+}

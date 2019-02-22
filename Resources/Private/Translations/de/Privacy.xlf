@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file original="" product-name="MIWeb.Neos.Privacy" source-language="en" datatype="plaintext" target-language="de">
+        <body>
+            <trans-unit id="cookies.text" xml:space="preserve" approved="yes">
+				<source><![CDATA[This website uses cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>]]></source>
+                <target xml:lang="de" state="translated"><![CDATA[Diese Website benutzt Cookies um Ihnen das bestmögliche Surferlebnis zu bieten. <a href="https://cookiesandyou.com/" target="_blank">Mehr erfahren</a>]]></target>
+            </trans-unit>
+            <trans-unit id="cookies.button" xml:space="preserve" approved="yes">
+				<source>Got it!</source>
+                <target xml:lang="de" state="translated">Alles klar!</target>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>
