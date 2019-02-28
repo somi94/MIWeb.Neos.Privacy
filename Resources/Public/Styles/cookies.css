@@ -37,7 +37,7 @@
     color: #444;
 	cursor: pointer;
     float: right;
-	padding: 0 1em;
+	padding: .375rem .75rem;
 }
 
 .miweb-neos-privacy-cookies a.btn:hover {
