@@ -1,7 +1,7 @@
 {
   "name": "miweb/neos-privacy",
   "type": "neos-plugin",
-  "license": "gpl-3",
+  "license": "GPL-3.0-or-later",
   "description": "Privacy extensions for Neos. Cookie notifications, ...",
   "require": {
       "neos/neos": "*"
