@@ -20,7 +20,7 @@
 
         container = document.createElement('div');
         container.className = containerClass;
-        container.innerHTML = '<a class="btn cookies-accept">' + (miwebPrivacyCookiesTranslations.button || buttonTextDefault) + '</a><p>' + (miwebPrivacyCookiesTranslations.message || textDefault) + '</p>';
+        container.innerHTML = '<a class="btn cookies-accept" href="#">' + (miwebPrivacyCookiesTranslations.button || buttonTextDefault) + '</a><p>' + (miwebPrivacyCookiesTranslations.message || textDefault) + '</p>';
 
         document.getElementsByTagName('body')[0].appendChild(container);
     }
@@ -47,6 +47,7 @@
                 d.setTime(d.getTime() + (days*24*60*60*1000));
                 document.cookie = cookie_name + "=1;expires=" + d.toUTCString() + ";path=/";
                 close();
+                return false;
             };
         }
 
@@ -54,6 +55,7 @@
         if(cookiesClose && cookiesClose.length) {
             cookiesClose[0].onclick = function() {
                 close();
+                return false;
             };
         }
     }
